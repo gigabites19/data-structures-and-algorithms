@@ -27,11 +27,11 @@ fn bubble_sort(mut unsorted_numbers: Vec<usize>) -> Vec<usize> {
     unsorted_numbers
 }
 
-fn is_sorted(sorted_numbers: &Vec<usize>) -> bool {
+fn is_sorted(maybe_sorted_numbers: &Vec<usize>) -> bool {
     let mut sorted = true;
 
-    for (idx, current_number) in sorted_numbers.iter().enumerate() {
-        let maybe_next_number = sorted_numbers.get(idx + 1);
+    for (idx, current_number) in maybe_sorted_numbers.iter().enumerate() {
+        let maybe_next_number = maybe_sorted_numbers.get(idx + 1);
 
         match maybe_next_number {
             Some(next_number) => {
