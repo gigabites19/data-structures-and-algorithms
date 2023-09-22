@@ -7,7 +7,7 @@ void swap(int numbers[2], int fidx, int sidx);
 
 int main () {
     int i;
-    int nums[10] = { 23, 17, 48, 12, 94, 1, 7, 13, 21, 19};
+    int nums[10] = { 23, 17, 48, 12, 94, 1, 7, 13, 21, 19 };
 
     bubble_sort(nums);
 
