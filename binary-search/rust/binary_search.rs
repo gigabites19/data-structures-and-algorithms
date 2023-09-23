@@ -1,7 +1,6 @@
 fn main() {
-    let haystack: Vec<isize> = vec![-1, -2, 0, 1, 2, 3, 4, 5, 13, 15, 21, 101];
-    let needle: isize = 15; 
-    // bug: can't find negative values. e.g.: let needle: isize = -1;
+    let haystack: Vec<isize> = vec![-2, -1, 0, 1, 2, 3, 4, 5, 13, 15, 21, 101];
+    let needle: isize = -2; 
 
     let maybe_min = haystack.get(0);
     let maybe_max = haystack.get(haystack.len() - 1);
@@ -35,6 +34,8 @@ fn main() {
 fn binary_search(needle: &isize, haystack: &Vec<isize>, mut from: usize, mut to: usize) -> Result<usize, isize> {
     let mid_idx = get_mid(&from, &to);
     let maybe_mid_number = haystack.get(mid_idx);
+
+    println!("{mid_idx}, {from}, {to}");
 
     match maybe_mid_number {
         Some(possibly_needle) => {
